@@ -1,0 +1,28 @@
+<MainScreen>:
+    canvas:
+        Color:
+            rgba: (0, 0.075, .1, .96)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        id: img
+        allow_stretch: True
+        keep_ratio: True
+    TextInput:
+        id: ticker
+        pos_hint: {'x': 0.35, 'top': 0.15}
+        size_hint: (0.2, 0.06)
+        font_size: 30
+        hint_text: 'Ticker'
+        multiline: False
+    Button:
+        pos_hint: {'x': 0.56, 'top': 0.15}
+        size_hint: (0.1, 0.06)
+        font_size: 30
+        text: "Enter"
+        on_press: root.show_png()
+<RootWidget>:
+    MainScreen:
+        id: screen
+        name: 'screen'
